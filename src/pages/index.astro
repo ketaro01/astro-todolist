@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TodoList from '../react/TodoList';
+import ContentCard from '../vue/ContentCard.vue';
+import Header from '../vue/Header.vue';
+---
+
+<Layout title="Todo List">
+	<div class="content">
+		<Header client:load />
+		<TodoList client:load />
+		<ContentCard client:load />
+	</div>
+</Layout>
+<style>
+	.content {
+		margin: 0 auto;
+	}
+</style>
